@@ -13,6 +13,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
 @app.post("/generate")
 async def generate(request: Request):
     data = await request.json()
@@ -23,4 +27,7 @@ async def generate(request: Request):
         answer = generate_answer(prompt)
         return {"answer": answer}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        import traceback
+        print(f"Error processing prompt '{prompt}': {e}")
+        print(traceback.format_exc())
+        raise HTTPException(status_code=500, detail=f"Internal error: {str(e)}")
