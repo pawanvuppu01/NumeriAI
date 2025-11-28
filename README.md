@@ -121,7 +121,7 @@ The TinyTransformer model uses:
 - **Max Sequence Length**: 32
 - **Vocabulary**: Digits (0-9) + Math operators (+-*/) + Space
 
-## 🎮 Usage
+##  Usage
 
 1. Enter a math problem in the frontend (e.g., "2+3")
 2. Click "Send"
