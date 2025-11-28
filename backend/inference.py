@@ -17,7 +17,18 @@ model = TinyTransformer(
 	nlayers=2,
 	max_len=32
 ).to(device)
-model.load_state_dict(torch.load(MODEL_PATH, map_location=device))
+try:
+	state = torch.load(MODEL_PATH, map_location=device)
+	model.load_state_dict(state)
+except Exception:
+	# Fallback for newer PyTorch versions where torch.load may expect
+	# different defaults (e.g., weights_only). Try a more permissive load.
+	try:
+		state = torch.load(MODEL_PATH, map_location=device, weights_only=False)
+		model.load_state_dict(state)
+	except Exception as e:
+		# Surface the original error so the server logs it clearly
+		raise RuntimeError(f"Failed to load model weights: {e}")
 model.eval()
 
 def generate_answer(prompt: str) -> str:

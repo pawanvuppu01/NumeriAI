@@ -1,0 +1,10 @@
+
+> numeriai-frontend@1.0.0 dev
+> vite --host
+
+
+  VITE v4.5.14  ready in 143 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.1.212:5173/
+  ➜  press h to show help
