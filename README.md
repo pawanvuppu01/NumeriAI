@@ -2,7 +2,7 @@
 
 A complete production-ready full-stack AI application demonstrating a minimal transformer-based LLM for mathematical Q&A tasks.
 
-## 🎯 Project Overview
+##  Project Overview
 
 NumeriAI is a full-stack implementation featuring:
 - **Backend**: FastAPI + PyTorch transformer model
@@ -10,7 +10,7 @@ NumeriAI is a full-stack implementation featuring:
 - **Training**: PyTorch-based model trainer
 - **Deployment**: Docker support for both backend and frontend
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ├── backend/                      # FastAPI backend with PyTorch
@@ -43,7 +43,7 @@ NumeriAI is a full-stack implementation featuring:
     └── dataset.txt               # Training dataset
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Train the Model
 
@@ -74,7 +74,7 @@ npm run dev
 
 The frontend will be available at `http://localhost:5173`.
 
-## 🐳 Docker Deployment
+##  Docker Deployment
 
 ### Backend Docker
 
@@ -92,7 +92,7 @@ docker build -t numeriai-frontend .
 docker run -p 80:80 numeriai-frontend
 ```
 
-## 🔧 Technology Stack
+##  Technology Stack
 
 ### Backend
 - **Framework**: FastAPI
@@ -111,7 +111,7 @@ docker run -p 80:80 numeriai-frontend
 - **Model**: Tiny Transformer (32 embedding size, 2 heads, 2 layers)
 - **Tokenizer**: Character-level tokenizer
 
-## 📊 Model Architecture
+##  Model Architecture
 
 The TinyTransformer model uses:
 - **Embedding Size**: 32
@@ -133,7 +133,7 @@ The TinyTransformer model uses:
 - `4*2` → `8`
 - `9/3` → `3`
 
-## 📋 API Endpoints
+##  API Endpoints
 
 ### POST /generate
 
@@ -151,7 +151,7 @@ Response:
 }
 ```
 
-## 🛠️ Development
+##  Development
 
 ### Backend Setup
 ```bash
@@ -175,7 +175,7 @@ cd training
 python train.py
 ```
 
-## 📦 Dependencies
+##  Dependencies
 
 ### Backend (`backend/requirements.txt`)
 - fastapi
@@ -190,12 +190,12 @@ python train.py
 - postcss
 - autoprefixer
 
-## 🔐 Security Notes
+##  Security Notes
 
 - CORS is enabled for all origins in development (update in production)
 - Model runs on CPU only (suitable for development/testing)
 
-## 🚢 Production Deployment
+##  Production Deployment
 
 For production deployment:
 1. Update CORS settings in `backend/main.py`
@@ -204,15 +204,15 @@ For production deployment:
 4. Deploy frontend behind Nginx or CDN
 5. Use proper model versioning and checkpointing
 
-## 📝 License
+##  License
 
 MIT License - See LICENSE file for details
 
-## 👤 Author
+##  Author
 
 Pawan Vuppu (@pawanvuppu01)
 
-## 🤝 Contributing
+##  Contributing
 
 Feel free to fork, submit issues, and create pull requests!
 
